@@ -148,6 +148,7 @@ runConfigure() {
     logit "${FUNCNAME[0]}"
     sleep 3
     ./configure --with-pydebug --with-lto --with-platlibdir=lib64 --prefix=$BUILD_DEST/python-${RECENT_TAG}
+    #./configure --enable-optimizations --enable-shared --with-lto --with-platlibdir=lib64 --prefix=$BUILD_DEST/python-${RECENT_TAG} LDFLAGS=-Wl,-rpath,$BUILD_DEST/python-${RECENT_TAG}/lib
 }
 
 
